@@ -425,7 +425,7 @@ public class TestTaskTwo extends AbstractTest {
         Method displayViewEmployerMethod = employerControllerClass.getMethod("displayViewEmployer", Model.class, int.class);
 
         new Expectations() {{
-           employerRepository.findById(String.valueOf(1));
+           employerRepository.findById(1);
         }};
 
         Model model = new ExtendedModelMap();
@@ -530,7 +530,7 @@ public class TestTaskTwo extends AbstractTest {
         Method displayViewSkillMethod = skillControllerClass.getMethod("displayViewSkill", Model.class, int.class);
 
         new Expectations() {{
-            skillRepository.findById(String.valueOf(1));
+            skillRepository.findById(1);
         }};
 
         Model model = new ExtendedModelMap();
