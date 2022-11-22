@@ -12,7 +12,7 @@ import java.util.List;
 public class Employer extends AbstractEntity {
 
     @NotBlank(message = "This cannot be left blank. Please enter a location.")
-    @Size(min=3, max=150)
+    @Size(min=3, max=150, message = "Must be between 3 and 150 characters.")
     private String location;
 
     public Employer (String location){
@@ -20,7 +20,7 @@ public class Employer extends AbstractEntity {
     }
     @OneToMany
     @JoinColumn(name = "employer_id")
-    private final List<Job> jobs = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<>();
 
     public List<Job> getJobs() {
         return jobs;

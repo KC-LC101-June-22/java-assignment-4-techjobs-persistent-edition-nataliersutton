@@ -32,6 +32,7 @@ public class ListController {
     public ListController () {
 
         columnChoices.put("all", "All");
+        columnChoices.put("job", "Job");
         columnChoices.put("employer", "Employer");
         columnChoices.put("skill", "Skill");
 
